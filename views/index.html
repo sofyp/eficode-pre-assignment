@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eficode</title>
+    <link rel="stylesheet" href="../src/styles/main.css">
+    <link rel="stylesheet" href="../node_modules/uikit/dist/css/uikit.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
+          integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+          crossorigin=""/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/css/uikit.min.css" />
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
+            integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+            crossorigin=""></script>
+</head>
+<body class="uk-background-secondary">
+<main class="uk-padding-large">
+    <div class="container">
+        <div id="clock" class="uk-h3 uk-margin-small-top"></div>
+        <div class="hsl uk-card uk-card-default uk-width-1-2@m uk-width-1-1 uk-height-1-1 uk-padding-small uk-overflow-auto">
+            <table class="uk-table uk-table-divider">
+                <thead>
+                <tr>
+                    <th>Departure</th>
+                    <th>Route</th>
+                    <th>To</th>
+                    <th>Stop</th>
+                    <th class="responsive-walkingtime">Distance</th>
+                </tr>
+                </thead>
+                <tbody id="queryresults">
+                </tbody>
+            </table>
+        </div>
+        <div class="map-style uk-width-1-1@m uk-height-1-1 uk-width-1-2" style="overflow: hidden;">
+            <div id="map" class="uk-position-right" style="height:100%; width:60%;">
+            </div>
+        </div>
+    </div>
+</main>
+<script src="../src/scripts/FetchHSL.js"></script>
+<script src="../src/scripts/Clock.js"></script>
+<script src="../node_modules/uikit/dist/js/uikit.min.js"></script>
+<script src="../node_modules/uikit/dist/js/uikit-icons.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/js/uikit-icons.min.js"></script>
+<script>
+    var map = L.map('map').setView([60.1694938,24.9263230], 17);
+    var eficodeIcon = L.icon({
+        iconUrl: '../src/graphics/Marker-eficode.png',
+        iconSize: [38,47],
+        iconAnchor: [15,55]
+    });
+    var marker = L.marker([60.1694938, 24.9263230], {icon: eficodeIcon}).addTo(map);
+    var hdTiles = L.tileLayer('https://cdn.digitransit.fi/map/v1/{id}/{z}/{x}/{y}@2x.png', {
+        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+            '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+        maxZoom: 19,
+        tileSize: 512,
+        zoomOffset: -1,
+        id: 'hsl-map'});
+
+    hdTiles.addTo(map);
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+body{
+    background: linear-gradient(#c3a43e, #F9D749) !important;
+}
+main{
+    background: linear-gradient(50deg, rgb(34,34,34) 59%, rgba(0, 0, 0, 0) 50%);
+    height: 100vh;
+}
+.responsive-walkingtime{
+    display: block;
+}
+@media screen and (max-width: 960px){
+    .responsive-walkingtime{
+        display: none;
+    }
+}
+#clock{
+    background-color: #FFFFFF;
+    width: content-box;
+    padding: 5px 20px;
+    margin: 15px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    position: absolute;
+    right: 10%;
+    top: -5%;
+    z-index: 510;
+    -moz-box-shadow: 0 0 10px #000000;
+    -webkit-box-shadow: 0 0 10px #000000;
+    box-shadow: 0 0 10px #000000;
+}
+.hsl{
+    box-sizing: border-box;
+    border-radius: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 500;
+}
+.container{
+    position:relative;
+    height: 83vmin;
+}
+#map div:nth-child(2) div{
+    right: 0 !important;
+    left: auto;
+    margin: 15px 15px 0 0 ;
+}
+.map-style{
+    display: block;
+    box-sizing: border-box;
+    border-radius: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    -moz-box-shadow: inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow: inset 0 0 10px #000000;
+}
+@media screen and (max-width: 960px){
+    .map-style{
+        display: none;
+    }
+}
+.bus{
+    background: url("../graphics/Bus.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: rgba(0,0,0,0);
+}
+.tram{
+    background: url("../graphics/Tram.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: rgba(0,0,0,0);
+}
+.late{
+    color: rgb(193, 57, 63);
+}
+.early{
+    color: rgb(67, 149, 100);
+}
