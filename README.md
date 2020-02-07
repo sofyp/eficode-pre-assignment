@@ -1,5 +1,6 @@
 # Eficode pre assignment
-Mandatory tasks plus additional UI framework and Leaflet map
+Mandatory tasks plus additional UI framework and Leaflet map. The application is made for info boards, but there's also some responsive behaviour.
+
 - Link to Docker: https://hub.docker.com/repository/docker/sofyp/eficode-app
 - Running app: http://users.metropolia.fi/~sofiat/Eficode/views/
 - Prototype: https://www.figma.com/file/GC8Fx4qk86Py698mxp2COu/Eficode?node-id=0%3A1
