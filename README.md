@@ -1,7 +1,6 @@
 # Eficode pre assignment
 Mandatory tasks plus additional UI framework and Leaflet map
 - Link to Docker: https://hub.docker.com/repository/docker/sofyp/eficode-app
-- Link to Github: https://github.com/sofyp?tab=repositories
 - Running app: http://users.metropolia.fi/~sofiat/Eficode/views/
 
 ## Development mode by running node
