@@ -2,6 +2,7 @@
 Mandatory tasks plus additional UI framework and Leaflet map
 - Link to Docker: https://hub.docker.com/repository/docker/sofyp/eficode-app
 - Running app: http://users.metropolia.fi/~sofiat/Eficode/views/
+- Prototype: https://www.figma.com/file/GC8Fx4qk86Py698mxp2COu/Eficode?node-id=0%3A1
 
 ## Development mode by running node
 - docker run -p 8000:8080 -d sofyp/eficode-web-app
