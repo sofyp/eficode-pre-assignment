@@ -8,7 +8,7 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.16.1",
+    "express": "^4.17.3",
     "node": "^13.7.0",
     "uikit": "^3.3.0"
   }
